@@ -1,6 +1,11 @@
-h1{ text-align: center; margin-bottom: 50px;}
+h1{ text-align: center;
+background-color:rgb(240, 240, 240)}
+h2{ text-align: center; margin-bottom: 50px; border: rgb(240, 240, 240) solid 1px;}
+body {
+     font-family: Arial, Helvetica, sans-serif;
+}
 #balloon-map{
-    width: 224px;
+    width: 350px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -9,26 +14,20 @@ h1{ text-align: center; margin-bottom: 50px;}
 .balloon {
     position: relative;
     flex-grow: 1;
-    width: 50px;
-    margin: 3px;
-    background: rgb(20,189,34);
+    width: 80px;
+    margin: 10px;
     opacity: .9;
-    border-radius: 50%;
+    border-radius: 4px;
     height: 50px;
     cursor: pointer; 
     animation: float 6s ease-in-out infinite;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
 }
-.balloon:after {
-    position: absolute;
-    background: inherit;
-    bottom: -5px;
-    left: 18px;
-    display: block;
-    content: '';
-    height: 10px;
-    width: 3px;
-    border-radius: 100%;
-}
+#congratulations {text-align: center; margin-top: 60px;}
+
 .balloon:hover{ animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; }
 .balloon.popped { visibility: hidden; }
 .balloon.popped:after { visibility: hidden; }
@@ -43,7 +42,7 @@ h1{ text-align: center; margin-bottom: 50px;}
 	}
 	50% {
 		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
+		transform: translatey(-5px);
 	}
 	100% {
 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
